@@ -1,6 +1,7 @@
 function createHeader() {
     const header = document.createElement("header")
     header.setAttribute("class", "header")
+    header.setAttribute("id", "header")
 
     const homeButton = document.createElement("button")
     homeButton.setAttribute("class", "btn-nav home")
@@ -32,16 +33,24 @@ function createHeader() {
 }
 
 function createMain() {
-
+    const main = document.createElement("main")
+    main.setAttribute("class", "main")
+    main.setAttribute("id", "main")
+    return main
 }
 
 function createFooter() {
-    
+    const footer = document.createElement("footer")
+    footer.setAttribute("class", "footer")
+    footer.setAttribute("id", "footer")
+    return footer
 }
 
 function initialize() {
     const content = document.getElementById("content")
     content.appendChild(createHeader())
+    content.appendChild(createMain())
+    content.appendChild(createFooter())
 }
 
 export default initialize
