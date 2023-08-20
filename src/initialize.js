@@ -60,8 +60,9 @@ function createFooter() {
 
     githubSvg.appendChild(githubPath)
     githubLink.appendChild(githubSvg)
-    credits.appendChild(githubLink)
+    
     footer.appendChild(credits)
+    footer.appendChild(githubLink)
     
     return footer
 }
