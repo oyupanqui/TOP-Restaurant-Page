@@ -1,3 +1,7 @@
+import loadHome from './home'
+import loadMenu from './menu'
+import loadContact from './contact'
+
 function createHeader() {
     const header = document.createElement("header")
     header.setAttribute("class", "header")
@@ -7,22 +11,25 @@ function createHeader() {
     homeButton.setAttribute("class", "btn-nav home")
     homeButton.textContent = "Home"
     homeButton.addEventListener("click", (e) => {
-        //loadHome()
-
+        main.innerHtml = ''
+        loadHome()
+        
     })
 
     const menuButton = document.createElement("button")
     menuButton.setAttribute("class", "btn-nav menu")
     menuButton.textContent = "Menu"
     menuButton.addEventListener("click", (e) => {
-        //loadMenu()
+        main.innerHtml = ''
+        loadMenu()
     })
 
     const contactButton = document.createElement("button")
     contactButton.setAttribute("class", "btn-nav contact")
     contactButton.textContent = "Contact"
     contactButton.addEventListener("click", (e) => {
-        //loadMenu()
+        main.innerHtml = ''
+        loadContact()
     })
 
     header.appendChild(homeButton)
@@ -60,7 +67,7 @@ function createFooter() {
 
     githubSvg.appendChild(githubPath)
     githubLink.appendChild(githubSvg)
-    
+
     footer.appendChild(credits)
     footer.appendChild(githubLink)
     

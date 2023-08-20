@@ -1,8 +1,5 @@
-const createHome = () => {
-    const home = document.createElement("div")
-    header.setAttribute("class", "home")
-    
-    
+const loadHome = () => {
+    console.log('home')
 }
 
-export default createHome
+export default loadHome
