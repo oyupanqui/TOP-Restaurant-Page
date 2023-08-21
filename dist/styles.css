@@ -1,7 +1,22 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 95%
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
 
 #content {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100%
 }
 
 #header {
@@ -9,13 +24,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px
+    gap: 30px
+}
+
+#header>button {
+    font-size: 1em;
 }
 
 #footer {
+    font-size: 1em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 10px
+}
+
+#footer svg {
+    height: 1.5em;
 }
