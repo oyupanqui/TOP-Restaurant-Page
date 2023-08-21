@@ -27,8 +27,13 @@ html, body {
     gap: 30px
 }
 
-#header>button {
-    font-size: 1em;
+#header button {
+    font-size: 1.5em;
+    width: 8em;
+    background-color: white;
+    border: 3px solid rgb(233, 198, 44);
+    padding: 5px;
+    color: rgb(138, 29, 29);
 }
 
 #footer {
