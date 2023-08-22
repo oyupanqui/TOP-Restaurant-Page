@@ -11,9 +11,8 @@ function createHeader() {
     homeButton.setAttribute("class", "btn-nav home")
     homeButton.textContent = "Home"
     homeButton.addEventListener("click", (e) => {
-        main.innerHtml = ''
+        main.innerHTML = ""
         loadHome()
-        
     })
 
     const menuButton = document.createElement("button")
@@ -55,7 +54,8 @@ function createFooter() {
     credits.textContent = "Copyright © 2023 oyupanqui"
 
     const githubLink = document.createElement("a")
-    githubLink.href = "https://github.com/oyupanqui"
+    githubLink.setAttribute("href", "https://github.com/oyupanqui") 
+    githubLink.setAttribute("target", "_blank")
 
     const githubSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
     const githubPath = document.createElementNS("http://www.w3.org/2000/svg", "path")
@@ -78,6 +78,7 @@ function initialize() {
     content.appendChild(createHeader())
     content.appendChild(createMain())
     content.appendChild(createFooter())
+    loadHome()
 }
 
 export default initialize
