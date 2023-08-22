@@ -4,31 +4,55 @@ import loadContact from './contact'
 
 function createHeader() {
     const header = document.createElement("header")
-    header.setAttribute("class", "header")
+    header.classList.add("header")
     header.setAttribute("id", "header")
 
     const homeButton = document.createElement("button")
-    homeButton.setAttribute("class", "btn-nav home")
+    homeButton.classList.add("btn-nav")
+    homeButton.classList.add("home")
+    homeButton.classList.add("active")
     homeButton.textContent = "Home"
+
     homeButton.addEventListener("click", (e) => {
         main.innerHTML = ""
         loadHome()
-    })
+        homeButton.classList.replace("inactive", "active")
+        try {
+            menuButton.classList.replace("active", "inactive")
+            contactButton.classList.replace("active", "inactive")
+        } catch {}
+    })    
 
     const menuButton = document.createElement("button")
-    menuButton.setAttribute("class", "btn-nav menu")
+    menuButton.classList.add("btn-nav")
+    menuButton.classList.add("menu")
     menuButton.textContent = "Menu"
+    menuButton.classList.add("inactive")
+
     menuButton.addEventListener("click", (e) => {
-        main.innerHtml = ''
+        main.innerHTML = ''
         loadMenu()
+        menuButton.classList.replace("inactive", "active")
+        try {
+            homeButton.classList.replace("active", "inactive")
+            contactButton.classList.replace("active", "inactive")
+        } catch {}
     })
 
     const contactButton = document.createElement("button")
-    contactButton.setAttribute("class", "btn-nav contact")
+    contactButton.classList.add("btn-nav")
+    contactButton.classList.add("contact")
     contactButton.textContent = "Contact"
+    contactButton.classList.add("inactive")
+
     contactButton.addEventListener("click", (e) => {
-        main.innerHtml = ''
+        main.innerHTML = ''
         loadContact()
+        contactButton.classList.replace("inactive", "active")
+        try {
+            homeButton.classList.replace("active", "inactive")
+            menuButton.classList.replace("active", "inactive")
+        } catch {}
     })
 
     header.appendChild(homeButton)
@@ -40,14 +64,14 @@ function createHeader() {
 
 function createMain() {
     const main = document.createElement("main")
-    main.setAttribute("class", "main")
+    main.classList.add("main")
     main.setAttribute("id", "main")
     return main
 }
 
 function createFooter() {
     const footer = document.createElement("footer")
-    footer.setAttribute("class", "footer")
+    footer.classList.add("footer")
     footer.setAttribute("id", "footer")
     
     const credits = document.createElement("p")

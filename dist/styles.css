@@ -8,14 +8,14 @@ html, body {
 }
 
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "serif"
 }
 
 #content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     height: 100%
 }
 
@@ -36,14 +36,31 @@ html, body {
     color: rgb(138, 29, 29);
 }
 
-#main {
+#header button:hover {
+    transform: scale(1.1);
+    transition: transform ease-out 0.1s;
+}
+
+#header button:active {
+    background-color: rgba(233, 198, 44, 0.5);
+}
+
+#main, .home, .menu, .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#main img {
+.home, .menu, .contact {
+    animation: fadeIn 2s;
+}
+
+.home img {
     width: 400px;
+}
+
+.home p {
+    font-size: 1.5em;
 }
 
 #footer {
@@ -57,4 +74,13 @@ html, body {
 
 #footer svg {
     height: 1.5em;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
