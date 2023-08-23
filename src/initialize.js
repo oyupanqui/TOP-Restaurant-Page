@@ -9,7 +9,6 @@ function createHeader() {
 
     const homeButton = document.createElement("button")
     homeButton.classList.add("btn-nav")
-    homeButton.classList.add("home")
     homeButton.textContent = "Home"
 
     homeButton.addEventListener("click", (e) => {
@@ -19,7 +18,6 @@ function createHeader() {
 
     const menuButton = document.createElement("button")
     menuButton.classList.add("btn-nav")
-    menuButton.classList.add("menu")
     menuButton.textContent = "Menu"
 
     menuButton.addEventListener("click", (e) => {
@@ -29,7 +27,6 @@ function createHeader() {
 
     const contactButton = document.createElement("button")
     contactButton.classList.add("btn-nav")
-    contactButton.classList.add("contact")
     contactButton.textContent = "Contact"
 
     contactButton.addEventListener("click", (e) => {

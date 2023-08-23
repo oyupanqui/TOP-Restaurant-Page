@@ -10,6 +10,8 @@ const loadHome = () => {
     const mainPhrase = document.createElement("p")
     mainPhrase.textContent = "We offer the best traditional food in town!"
     home.appendChild(mainPhrase)
+    
+    return home
 }
 
 export default loadHome
