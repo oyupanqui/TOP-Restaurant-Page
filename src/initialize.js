@@ -10,49 +10,31 @@ function createHeader() {
     const homeButton = document.createElement("button")
     homeButton.classList.add("btn-nav")
     homeButton.classList.add("home")
-    homeButton.classList.add("active")
     homeButton.textContent = "Home"
 
     homeButton.addEventListener("click", (e) => {
         main.innerHTML = ""
         loadHome()
-        homeButton.classList.replace("inactive", "active")
-        try {
-            menuButton.classList.replace("active", "inactive")
-            contactButton.classList.replace("active", "inactive")
-        } catch {}
     })    
 
     const menuButton = document.createElement("button")
     menuButton.classList.add("btn-nav")
     menuButton.classList.add("menu")
     menuButton.textContent = "Menu"
-    menuButton.classList.add("inactive")
 
     menuButton.addEventListener("click", (e) => {
         main.innerHTML = ''
         loadMenu()
-        menuButton.classList.replace("inactive", "active")
-        try {
-            homeButton.classList.replace("active", "inactive")
-            contactButton.classList.replace("active", "inactive")
-        } catch {}
     })
 
     const contactButton = document.createElement("button")
     contactButton.classList.add("btn-nav")
     contactButton.classList.add("contact")
     contactButton.textContent = "Contact"
-    contactButton.classList.add("inactive")
 
     contactButton.addEventListener("click", (e) => {
         main.innerHTML = ''
         loadContact()
-        contactButton.classList.replace("inactive", "active")
-        try {
-            homeButton.classList.replace("active", "inactive")
-            menuButton.classList.replace("active", "inactive")
-        } catch {}
     })
 
     header.appendChild(homeButton)
