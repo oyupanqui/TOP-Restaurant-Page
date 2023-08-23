@@ -66,7 +66,44 @@ html, body {
 }
 
 .menu {
+    padding: 10px;
     display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    grid-template-rows: auto;
+    grid-auto-rows: 1fr;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 100%
+}
+
+.item .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.2s 
+}
+
+.item .description {
+    font-size: 1em;
+    text-align: center;
 }
 
 #footer {
