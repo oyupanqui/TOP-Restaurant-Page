@@ -115,6 +115,12 @@ html, body {
     margin-bottom: 20px;
 }
 
+.location {
+    margin-bottom: 20px;
+    width: 600px;
+    height: 400px;
+}
+
 #footer {
     font-size: 1em;
     display: flex;
