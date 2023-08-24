@@ -1,3 +1,5 @@
+import loadMenu from './menu'
+
 const loadHome = () => {
     const home = document.createElement("div");
     home.classList.add("home")
@@ -11,6 +13,16 @@ const loadHome = () => {
     mainPhrase.textContent = "We offer the best traditional food in town!"
     home.appendChild(mainPhrase)
     
+    const orderButton = document.createElement("button")
+    orderButton.classList.add("order-btn")
+    orderButton.textContent = "Order now!"
+    orderButton.addEventListener("click", (e) => {
+        home.querySelectorAll('*').forEach(n => n.remove())
+        loadMenu()
+    })    
+
+    home.appendChild(orderButton)
+
     return home
 }
 

@@ -12,7 +12,7 @@ function createHeader() {
     homeButton.textContent = "Home"
 
     homeButton.addEventListener("click", (e) => {
-        main.innerHTML = ""
+        main.querySelectorAll('*').forEach(n => n.remove())
         loadHome()
     })    
 
@@ -21,7 +21,7 @@ function createHeader() {
     menuButton.textContent = "Menu"
 
     menuButton.addEventListener("click", (e) => {
-        main.innerHTML = ''
+        main.querySelectorAll('*').forEach(n => n.remove())
         loadMenu()
     })
 
@@ -30,7 +30,7 @@ function createHeader() {
     contactButton.textContent = "Contact"
 
     contactButton.addEventListener("click", (e) => {
-        main.innerHTML = ''
+        main.querySelectorAll('*').forEach(n => n.remove())
         loadContact()
     })
 

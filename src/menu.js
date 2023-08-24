@@ -38,7 +38,6 @@ const loadMenu = () => {
     menu.classList.add("menu")
     main.appendChild(menu)
     const dishList = [ceviche, lomo, pollo, papa, causa, aji].forEach(dish => {addMenuItem(dish)})
-    console.log(dishList)
 
     return menu
 }
