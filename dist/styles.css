@@ -29,7 +29,7 @@ html, body {
     background-color: rgb(229, 185, 83, 0.2);
 }
 
-#header button {
+#header button, .order-btn {
     font-size: 1.5em;
     width: 8em;
     background-color: white;
@@ -38,7 +38,7 @@ html, body {
     color: rgb(128, 8, 10);
 }
 
-#header button:hover {
+#header button:hover, .order-btn:hover {
     transform: scale(1.1);
     transition: transform ease-out 0.1s;
 }
@@ -109,6 +109,10 @@ html, body {
 
 .item:hover {
     background-color: rgb(229, 185, 83, 0.2);
+}
+
+.order-btn {
+    margin-bottom: 20px;
 }
 
 #footer {
