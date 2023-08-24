@@ -58,6 +58,7 @@ html, body {
 }
 
 .home img {
+    margin: 10px;
     width: 500px;
 }
 
@@ -115,6 +116,10 @@ html, body {
     margin-bottom: 20px;
 }
 
+.contact p {
+    font-size: 1.2em;
+}
+
 .location {
     margin-bottom: 20px;
     width: 600px;
@@ -136,11 +141,49 @@ html, body {
     height: 1.5em;
 }
 
+p {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    #header button, .order-btn {
+        font-size: 1em;
+    }
+    .home p {
+        font-size: 1em;
+    }
+    .home img {
+        width: 300px;
+    }
+    .item .title {
+        font-size: 1em;
+    }
+    .item img {
+        width: 100px;
+        height: 100px;
+    }
+    .item .description {
+        font-size: 0.8em;
+    }
+    .contact p {
+        font-size: 0.8em;
+    }
+    .location {
+        width: 300px;
+        height: 200px;
+    }
+    #footer {
+        font-size: 0.7em;
     }
 }
